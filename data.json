@@ -1,0 +1,356 @@
+{
+  "menus": {
+    "formuleMidi": {
+      "entrees": [
+        {
+          "name": "Entrée 1",
+          "price": 10.99
+        },
+        {
+          "name": "Entrée 2",
+          "price": 8.99
+        },
+        {
+          "name": "Entrée 3",
+          "price": 12.99
+        }
+      ],
+      "plats": [
+        {
+          "name": "Plat 1",
+          "price": 15.99
+        },
+        {
+          "name": "Plat 2",
+          "price": 13.99
+        },
+        {
+          "name": "Plat 3",
+          "price": 18.99
+        }
+      ],
+      "desserts": [
+        {
+          "name": "Dessert 1",
+          "price": 6.99
+        },
+        {
+          "name": "Dessert 2",
+          "price": 5.99
+        },
+        {
+          "name": "Dessert 3",
+          "price": 7.99
+        }
+      ]
+    },
+    "formuleSoirWK": {
+      "entrees": [
+        {
+          "name": "Entrée 4",
+          "price": 9.99
+        },
+        {
+          "name": "Entrée 5",
+          "price": 7.99
+        },
+        {
+          "name": "Entrée 6",
+          "price": 11.99
+        }
+      ],
+      "plats": [
+        {
+          "name": "Plat 4",
+          "price": 17.99
+        },
+        {
+          "name": "Plat 5",
+          "price": 14.99
+        },
+        {
+          "name": "Plat 6",
+          "price": 19.99
+        }
+      ],
+      "desserts": [
+        {
+          "name": "Dessert 4",
+          "price": 8.99
+        },
+        {
+          "name": "Dessert 5",
+          "price": 7.99
+        },
+        {
+          "name": "Dessert 6",
+          "price": 9.99
+        }
+      ]
+    },
+    "menuEnfant": [
+      {
+        "name": "Menu Enfant 1",
+        "price": 9.99
+      },
+      {
+        "name": "Menu Enfant 2",
+        "price": 8.99
+      }
+    ],
+    "aLaCarte": {
+      "entrees": [
+        {
+          "name": "Entrée 6",
+          "price": 11.99
+        },
+        {
+          "name": "Entrée 7",
+          "price": 9.99
+        },
+        {
+          "name": "Entrée 8",
+          "price": 13.99
+        }
+      ],
+      "plats": [
+        {
+          "name": "Plat 7",
+          "price": 16.99
+        },
+        {
+          "name": "Plat 8",
+          "price": 14.99
+        },
+        {
+          "name": "Plat 9",
+          "price": 19.99
+        }
+      ],
+      "desserts": [
+        {
+          "name": "Dessert 7",
+          "price": 7.99
+        },
+        {
+          "name": "Dessert 8",
+          "price": 6.99
+        },
+        {
+          "name": "Dessert 9",
+          "price": 8.99
+        }
+      ],
+      "suggestions": {
+        "entrees": [
+          {
+            "name": "Entrée 6",
+            "price": 11.99
+          },
+          {
+            "name": "Entrée 7",
+            "price": 9.99
+          },
+          {
+            "name": "Entrée 8",
+            "price": 13.99
+          }
+        ],
+        "plats": [
+          {
+            "name": "Plat 7",
+            "price": 16.99
+          },
+          {
+            "name": "Plat 8",
+            "price": 14.99
+          },
+          {
+            "name": "Plat 9",
+            "price": 19.99
+          }
+        ],
+        "desserts": [
+          {
+            "name": "Dessert 7",
+            "price": 7.99
+          },
+          {
+            "name": "Dessert 8",
+            "price": 6.99
+          },
+          {
+            "name": "Dessert 9",
+            "price": 8.99
+          }
+        ]
+      },
+      "glaces": {
+        "incontournables": [
+          {
+            "name": "Glace 1",
+            "price": 4.99
+          },
+          {
+            "name": "Glace 2",
+            "price": 4.99
+          }
+        ],
+        "inattendues": [
+          {
+            "name": "Glace 3",
+            "price": 4.99
+          },
+          {
+            "name": "Glace 4",
+            "price": 4.99
+          }
+        ],
+        "interdites": [
+          {
+            "name": "Glace 5",
+            "price": 4.99
+          },
+          {
+            "name": "Glace 6",
+            "price": 4.99
+          }
+        ],
+        "nosParfums": [
+          {
+            "name": "Glace 7",
+            "price": 4.99
+          },
+          {
+            "name": "Glace 8",
+            "price": 4.99
+          }
+        ]
+      }
+    }
+  },
+  "boissons": {
+    "cocktails": [
+      {
+        "name": "Cocktail 1",
+        "price": 9.99
+      },
+      {
+        "name": "Cocktail 2",
+        "price": 8.99
+      }
+    ],
+    "bieres": [
+      {
+        "name": "Bière 1",
+        "price": 5.99
+      },
+      {
+        "name": "Bière 2",
+        "price": 4.99
+      }
+    ],
+    "whiskies": [
+      {
+        "name": "Whisky 1",
+        "price": 12.99
+      },
+      {
+        "name": "Whisky 2",
+        "price": 11.99
+      }
+    ],
+    "aperitifs": [
+      {
+        "name": "Apéritif 1",
+        "price": 6.99
+      },
+      {
+        "name": "Apéritif 2",
+        "price": 5.99
+      }
+    ],
+    "softs": [
+      {
+        "name": "Soft 1",
+        "price": 3.99
+      },
+      {
+        "name": "Soft 2",
+        "price": 2.99
+      }
+    ],
+    "boissonsChaudes": [
+      {
+        "name": "Boisson Chaude 1",
+        "price": 3.99
+      },
+      {
+        "name": "Boisson Chaude 2",
+        "price": 2.99
+      }
+    ],
+    "digestifs": [
+      {
+        "name": "Digestif 1",
+        "price": 7.99
+      },
+      {
+        "name": "Digestif 2",
+        "price": 6.99
+      }
+    ],
+    "vins": {
+      "rouge": [
+        {
+          "name": "Vin Rouge 1",
+          "price": 19.99
+        },
+        {
+          "name": "Vin Rouge 2",
+          "price": 18.99
+        }
+      ],
+      "rose": [
+        {
+          "name": "Vin Rosé 1",
+          "price": 17.99
+        },
+        {
+          "name": "Vin Rosé 2",
+          "price": 16.99
+        }
+      ],
+      "blancSec": [
+        {
+          "name": "Vin Blanc Sec 1",
+          "price": 18.99
+        },
+        {
+          "name": "Vin Blanc Sec 2",
+          "price": 17.99
+        }
+      ],
+      "blancMoelleux": [
+        {
+          "name": "Vin Blanc Moelleux 1",
+          "price": 19.99
+        },
+        {
+          "name": "Vin Blanc Moelleux 2",
+          "price": 18.99
+        }
+      ],
+      "champagne": [
+        {
+          "name": "Champagne 1",
+          "price": 39.99
+        },
+        {
+          "name": "Champagne 2",
+          "price": 38.99
+        }
+      ]
+    }
+  }
+}
