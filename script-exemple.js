@@ -37,7 +37,7 @@ class Menu {
     }
   
     async fetchData() {
-      const rawData = await fetch("data.json");
+      const rawData = await fetch("data-exemple.json");
       const data = await rawData.json();
       return data;
     }

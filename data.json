@@ -47,30 +47,26 @@
     "formuleSoirWK": {
       "entrees": [
         {
-          "name": "Entrée 4",
+          "name": "Les 9 Huîtres n°5 du Bassin d'Arcachon",
           "price": 9.99
         },
         {
-          "name": "Entrée 5",
+          "name": "Crème brulée au reblochon et glace au foie gras",
           "price": 7.99
         },
         {
-          "name": "Entrée 6",
+          "name": "Profiteroles au saumon fumé, crème citronnée",
           "price": 11.99
         }
       ],
       "plats": [
         {
-          "name": "Plat 4",
+          "name": "Jarrêt de porc, crème aux morilles",
           "price": 17.99
         },
         {
-          "name": "Plat 5",
+          "name": "Croustillant de saumon aux épinards et linguines",
           "price": 14.99
-        },
-        {
-          "name": "Plat 6",
-          "price": 19.99
         }
       ],
       "desserts": [
@@ -90,11 +86,15 @@
     },
     "menuEnfant": [
       {
-        "name": "Menu Enfant 1",
+        "name": "Viande ou poisson",
         "price": 9.99
       },
       {
-        "name": "Menu Enfant 2",
+        "name": "Frites maison ou riz",
+        "price": 8.99
+      },
+      {
+        "name": "Glace 2 boules ou Dessert du jour",
         "price": 8.99
       }
     ],
@@ -232,123 +232,447 @@
   "boissons": {
     "cocktails": [
       {
-        "name": "Cocktail 1",
-        "price": 9.99
-      },
-      {
-        "name": "Cocktail 2",
-        "price": 8.99
+        "name": "",
+        "price": 1
       }
     ],
     "bieres": [
       {
-        "name": "Bière 1",
-        "price": 5.99
+        "name": "Bière pression 1664 25 cl",
+        "price": 3.5
       },
       {
-        "name": "Bière 2",
-        "price": 4.99
+        "name": "Bière pression 1664 33 cl",
+        "price": 4.5
+      },
+      {
+        "name": "Bière pression 1664 50 cl",
+        "price": 6.0
+      },
+      {
+        "name": "Bière pression Grimbergen 25 cl",
+        "price": 4.5
+      },
+      {
+        "name": "Bière pression Grimbergen 33 cl",
+        "price": 5.5
+      },
+      {
+        "name": "Bière pression Grimbergen 50 cl",
+        "price": 8.0
+      },
+      {
+        "name": "Grimbergen blue - bouteille de 33 cl",
+        "price": 5.5
       }
     ],
     "whiskies": [
       {
-        "name": "Whisky 1",
-        "price": 12.99
+        "name": "Whisky Clan campbell 4 cl",
+        "price": 6.0
       },
       {
-        "name": "Whisky 2",
-        "price": 11.99
+        "name": "Paddy Irish whiskey 4 cl",
+        "price": 6.0
+      },
+      {
+        "name": "Jack Daniel's 4 cl",
+        "price": 7.0
+      },
+      {
+        "name": "Aberlour 4 cl",
+        "price": 8.5
+      },
+      {
+        "name": "Chivas Regal scotch whisky 4 cl",
+        "price": 8.5
+      },
+      {
+        "name": "Glenfiddich 4 cl",
+        "price": 8.5
       }
     ],
     "aperitifs": [
       {
-        "name": "Apéritif 1",
-        "price": 6.99
+        "name": "Cidre brut 25 cl",
+        "price": 4.9
       },
       {
-        "name": "Apéritif 2",
-        "price": 5.99
+        "name": "Kir au vin blanc (cassis, pêche, mûre) 12 cl",
+        "price": 4.5
+      },
+      {
+        "name": "Ricard 2 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Pastis 51 2 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Berger blanc 2 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Martini rouge ou blanc 5 cl",
+        "price": 5.0
+      },
+      {
+        "name": "Pineau des charentes (blanc ou rouge) 4 cl",
+        "price": 5.0
+      },
+      {
+        "name": "Lillet (blanc, rouge ou rosé) 4 cl",
+        "price": 5.0
+      },
+      {
+        "name": "Porto (blanc ou rouge) 4 cl",
+        "price": 5.0
       }
     ],
     "softs": [
       {
-        "name": "Soft 1",
-        "price": 3.99
+        "name": "Jus de fruits PAGO 20 cl",
+        "price": 4.0
       },
       {
-        "name": "Soft 2",
-        "price": 2.99
+        "name": "Coca cola / Coca cola zéro 33 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Orangina 25 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Perrier 33 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Ice-tea 25 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Sirop à l'eau 25 cl",
+        "price": 3.0
+      },
+      {
+        "name": "Limonade 25 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Diabolo 25 cl",
+        "price": 4.5
+      },
+      {
+        "name": "Schweppes tonic 25 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Schweppes agrumes 25 cl",
+        "price": 4.0
+      },
+      {
+        "name": "Bière bouteille sans alcool 25 cl",
+        "price": 4.9
+      },
+      {
+        "name": "Abatilles gazeuse ou plate 1L",
+        "price": 5.0
+      },
+      {
+        "name": "Abatilles gazeuse ou plate 0,50 L",
+        "price": 4.0
       }
     ],
     "boissonsChaudes": [
       {
-        "name": "Boisson Chaude 1",
-        "price": 3.99
+        "name": "Café",
+        "price": 1.9
       },
       {
-        "name": "Boisson Chaude 2",
-        "price": 2.99
+        "name": "Décaféiné",
+        "price": 1.9
+      },
+      {
+        "name": "Grand café ou Grand crème",
+        "price": 2.5
+      },
+      {
+        "name": "Capuccino",
+        "price": 3.5
+      },
+      {
+        "name": "Thé ou Infusion",
+        "price": 3.9
+      },
+      {
+        "name": "Irish coffee",
+        "price": 3.5
+      },
+      {
+        "name": "Petit crème",
+        "price": 2.5
+      },
+      {
+        "name": "3,50 €",
+        "price": 8.5
       }
     ],
     "digestifs": [
       {
-        "name": "Digestif 1",
-        "price": 7.99
+        "name": "Get 27 5 cl",
+        "price": 6.5
       },
       {
-        "name": "Digestif 2",
-        "price": 6.99
+        "name": "Get 31 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Bailey’s 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Manzana 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Marie-Brizard 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Vodka Bison 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Limoncello 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Sève Feu de Joie 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Armagnac 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Calvados 5 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Poire Williams 5 cl",
+        "price": 8.5
+      },
+      {
+        "name": "Cognac VSOP 5 cl",
+        "price": 8.5
+      }
+    ],
+    "rhums": [
+      {
+        "name": "Havana Club 4 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Saint-James 4 cl",
+        "price": 6.5
+      },
+      {
+        "name": "Clément Martinique 5 cl",
+        "price": 8.5
+      },
+      {
+        "name": "Bacardi 5 cl",
+        "price": 9.5
+      },
+      {
+        "name": "Diplomatico 5 cl",
+        "price": 9.5
+      },
+      {
+        "name": "Don Papa 5 cl",
+        "price": 9.5
       }
     ],
     "vins": {
       "rouge": [
         {
-          "name": "Vin Rouge 1",
-          "price": 19.99
+          "name": "Bordeaux AOP Le Louvetier inspiré par La Louvière 75 cl",
+          "price": 23.0
         },
         {
-          "name": "Vin Rouge 2",
-          "price": 18.99
+          "name": "Côtes de Bourg AOP Château Haut Guiraud 75 cl",
+          "price": 20.0
+        },
+        {
+          "name": "Côtes de Bourg AOP Château Haut Guiraud 50 cl",
+          "price": 15.0
+        },
+        {
+          "name": "Côtes du Rhône BIO AOP Château des Coccinelles 75 cl",
+          "price": 25.0
+        },
+        {
+          "name": "AOP Pic Saint-Loup Haut-Lirou Languedoc Roussillon 75 cl",
+          "price": 25.0
+        },
+        {
+          "name": "Côtes de Bœuf IGP d’OC Languedoc Roussillon 75 cl",
+          "price": 19.0
+        },
+        {
+          "name": "Graves AOP Château Boiresse 75 cl",
+          "price": 25.0
+        },
+        {
+          "name": "Graves AOP Château Boiresse 50 cl",
+          "price": 18.0
+        },
+        {
+          "name": "Pessac Léognan AOP Château Mancèdre Les Griottes 75 cl",
+          "price": 34.0
+        },
+        {
+          "name": "Pessac Léognan AOP Marquise Haut Vigneau 75 cl",
+          "price": 57.0
+        },
+        {
+          "name": "AOP Saint-Estèphe La Coccinelle de Petit Bocq 75 cl",
+          "price": 39.0
+        },
+        {
+          "name": "AOP Haut-Médoc Château Lamothe Cissac 75 cl",
+          "price": 28.0
+        },
+        {
+          "name": "AOP Haut-Médoc Château Lamothe Cissac 37.5 cl",
+          "price": 16.0
+        },
+        {
+          "name": "Saint-Émilion AOP Château Tour Puyblanquet 75 cl",
+          "price": 31.0
+        },
+        {
+          "name": "Pomerol AOP Vieux château brun 75 cl",
+          "price": 49.0
+        },
+        {
+          "name": "Vin Californien 770 Miles Zinfandel Californie 75 cl",
+          "price": 25.0
+        },
+        {
+          "name": "Vin Argentin Tupungato Mendoza Cameleon Malbec BIO 75 cl",
+          "price": 27.0
+        },
+        {
+          "name": "Vin Chilien Central Valley Cono Sur Bicicleta 75 cl",
+          "price": 25.0
+        },
+        {
+          "name": "Vin Italien Sicilia DOC Luma Nero d’Avola 75 cl",
+          "price": 26.0
         }
       ],
       "rose": [
         {
-          "name": "Vin Rosé 1",
-          "price": 17.99
+          "name": "IGP Méditerranée Pur Gris 75 cl",
+          "price": 17.0
         },
         {
-          "name": "Vin Rosé 2",
-          "price": 16.99
+          "name": "Côtes de Provence AOP Les Hauts de Masterel 75 cl",
+          "price": 22.0
+        },
+        {
+          "name": "Côtes de Provence AOP Les Hauts de Masterel 37.5 cl",
+          "price": 14.0
+        },
+        {
+          "name": "Cabernet d'Anjou AOP Parfum Rosé 75 cl",
+          "price": 21.0
+        },
+        {
+          "name": "Marcel IGP Pays d’Oc Languedoc Roussillon 75 cl",
+          "price": 21.0
+        },
+        {
+          "name": "AOP Corse Domaine Casabianca 75 cl",
+          "price": 27.0
+        },
+        {
+          "name": "Château Maubert AOP Bordeaux Bio 75 cl",
+          "price": 24.0
         }
       ],
+
       "blancSec": [
         {
-          "name": "Vin Blanc Sec 1",
-          "price": 18.99
+          "name": "IGP Côtes de Gascogne UBY 75 cl",
+          "price": 19.0
         },
         {
-          "name": "Vin Blanc Sec 2",
-          "price": 17.99
+          "name": "Vin Chilien Central Valle Cono Sur Bicicleta Sauvignon blanc 75 cl",
+          "price": 25.0
+        },
+        {
+          "name": "Vin Californien 770 Miles Zinfandel Californie 75 cl",
+          "price": 25.0
+        },
+        {
+          "name": "Clos des Orfeuilles AOP Muscadet Sevre et Maine Sur Lie BIO 75 cl",
+          "price": 24.0
+        },
+        {
+          "name": "Entre deux Mers AOP Château Sainte Marie 75 cl",
+          "price": 23.0
+        },
+        {
+          "name": "Entre deux Mers AOP Château Sainte Marie 37.5 cl",
+          "price": 15.0
+        },
+        {
+          "name": "Vin Argentin BIO Cameleon Torrontes Chardonnay 75 cl",
+          "price": 27.0
+        },
+        {
+          "name": "Chablis AOP Christophe Patrice 75 cl",
+          "price": 32.0
+        },
+        {
+          "name": "Pessac Léognan AOP Cantebau vignoble Lurton 75 cl",
+          "price": 39.0
         }
       ],
       "blancMoelleux": [
         {
-          "name": "Vin Blanc Moelleux 1",
-          "price": 19.99
+          "name": "Soleil d’Arche AOC Sauternes 75 cl",
+          "price": 39.0
         },
         {
-          "name": "Vin Blanc Moelleux 2",
-          "price": 18.99
+          "name": "Soleil d’Arche AOC Sauternes 37.5 cl",
+          "price": 27.0
+        },
+        {
+          "name": "Côtes de Gascogne IGP Bal des Papillons 75 cl",
+          "price": 22.0
         }
       ],
+
       "champagne": [
         {
-          "name": "Champagne 1",
-          "price": 39.99
+          "name": "Louis Tollet Brut 1er Cru 75 cl Blanc",
+          "price": 52.0
         },
         {
-          "name": "Champagne 2",
-          "price": 38.99
+          "name": "Louis Tollet Brut 1er Cru 18.7 cl Blanc",
+          "price": 18.0
+        },
+        {
+          "name": "Louis Tollet Brut 1er Cru 75 cl Rose",
+          "price": 55.0
+        },
+        {
+          "name": "Opale Crémant de Bordeaux Célene Blanc de Blanc brut 75 cl",
+          "price": 25.0
         }
       ]
     }
