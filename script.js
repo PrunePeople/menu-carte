@@ -1,3 +1,11 @@
+function addMiddleDots(name, maxLength) {
+  if (name.length >= maxLength) {
+    return name;
+  }
+  const nbrOfDotsToAdd = maxLength - name.length;
+  const dots = Array(nbrOfDotsToAdd).fill(".").join("");
+  return name + dots;
+}
 class Menu {
   async templateMenu() {
     const menu = await this.fetchData();
@@ -61,7 +69,7 @@ class Menu {
     const aLaCarteEntreesHTML = menu.menus.aLaCarte.entrees
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -71,7 +79,7 @@ class Menu {
     const aLaCartePlatsHTML = menu.menus.aLaCarte.plats
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -81,7 +89,7 @@ class Menu {
     const aLaCarteDessertsHTML = menu.menus.aLaCarte.desserts
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -92,7 +100,7 @@ class Menu {
       menu.menus.aLaCarte.suggestions.entrees
         .map(
           (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
             2
           )}€</p>
         `
@@ -102,7 +110,7 @@ class Menu {
     const aLaCarteSuggestionsPlatsHTML = menu.menus.aLaCarte.suggestions.plats
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -113,7 +121,7 @@ class Menu {
       menu.menus.aLaCarte.suggestions.desserts
         .map(
           (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
             2
           )}€</p>
         `
@@ -124,7 +132,7 @@ class Menu {
       menu.menus.aLaCarte.glaces.incontournables
         .map(
           (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
             2
           )}€</p>
         `
@@ -134,7 +142,7 @@ class Menu {
     const aLaCarteGlacesInattenduesHTML = menu.menus.aLaCarte.glaces.inattendues
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -144,7 +152,7 @@ class Menu {
     const aLaCarteGlacesInterditesHTML = menu.menus.aLaCarte.glaces.interdites
       .map(
         (item) => `
-        <p>${item.name} .............................. ${item.price.toFixed(
+        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
       `
@@ -154,7 +162,7 @@ class Menu {
       menu.menus.aLaCarte.glaces.nosParfums.glace
         .map(
           (item) => `
-      <p>${item.name} .............................. ${item.price1.toFixed(
+      <p>${addMiddleDots(item.name, 90)}  ${item.price1.toFixed(
             2
           )}€ - ${item.price2.toFixed(2)}€</p>
     `
@@ -165,7 +173,7 @@ class Menu {
       menu.menus.aLaCarte.glaces.nosParfums.sorbet
         .map(
           (item) => `
-        <p>${item.name} .............................. ${item.price1.toFixed(
+        <p>${addMiddleDots(item.name, 90)}  ${item.price1.toFixed(
             2
           )}€ - ${item.price2.toFixed(2)}€</p>
       `
@@ -175,7 +183,7 @@ class Menu {
     const boissonsCocktailsSansAlcoolHTML = menu.boissons.cocktails.sansAlcool
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -185,7 +193,7 @@ class Menu {
     const boissonsCocktailsAvecAlcoolHTML = menu.boissons.cocktails.avecAlcool
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -195,7 +203,7 @@ class Menu {
     const boissonsBieresHTML = menu.boissons.bieres
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -205,7 +213,7 @@ class Menu {
     const boissonsWhiskiesHTML = menu.boissons.whiskies
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -215,7 +223,7 @@ class Menu {
     const boissonsAperitifsHTML = menu.boissons.aperitifs
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -225,7 +233,7 @@ class Menu {
     const boissonsSoftsHTML = menu.boissons.softs
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -235,7 +243,7 @@ class Menu {
     const boissonsBoissonsChaudesHTML = menu.boissons.boissonsChaudes
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -245,7 +253,7 @@ class Menu {
     const boissonsDigestifsHTML = menu.boissons.digestifs
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -255,7 +263,7 @@ class Menu {
     const boissonsRhumsHTML = menu.boissons.rhums
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -265,7 +273,7 @@ class Menu {
     const boissonsVinsRougeHTML = menu.boissons.vins.rouge
       .map(
         (item) => `
-        <p>${item.name} .............................. ${item.price.toFixed(
+        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
       `
@@ -275,7 +283,7 @@ class Menu {
     const boissonsVinsRoseHTML = menu.boissons.vins.rose
       .map(
         (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
         `
@@ -285,7 +293,7 @@ class Menu {
     const boissonsVinsblancSecHTML = menu.boissons.vins.blancSec
       .map(
         (item) => `
-        <p>${item.name} .............................. ${item.price.toFixed(
+        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
       `
@@ -295,7 +303,7 @@ class Menu {
     const boissonsVinsBlancMoelleuxHTML = menu.boissons.vins.blancMoelleux
       .map(
         (item) => `
-      <p>${item.name} .............................. ${item.price.toFixed(
+      <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
           2
         )}€</p>
     `
@@ -305,7 +313,7 @@ class Menu {
     const boissonsVinsChampagneHTML = menu.boissons.vins.champagne
       .map(
         (item) => `
-    <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
     `
       )
       .join("");
@@ -483,3 +491,39 @@ async function renderMenu() {
 }
 
 renderMenu();
+
+
+// Poqiiton de la nav suivant le scroll
+window.addEventListener("scroll", function() {
+  var navigation = document.querySelector(".menu-navigation");
+  var windowHeight = window.innerHeight;
+  var threshold = windowHeight * 1.4; // Ajustez cette valeur selon vos besoins
+
+  if (window.pageYOffset > threshold) {
+    navigation.classList.add("sticky");
+  } else {
+    navigation.classList.remove("sticky");
+  }
+});
+
+
+// Flèche bas
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  var scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  if (scrollPosition > 500) {
+    scrollToTopButton.classList.add('show');
+  } else {
+    scrollToTopButton.classList.remove('show');
+  }
+});
+
+document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
