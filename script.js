@@ -3,9 +3,12 @@ class Menu {
     const menu = await this.fetchData();
 
     const formuleMidiEntreesHTML = menu.menus.formuleMidi.entrees
-      .map(item => `
+      .map(
+        (item) => `
       <p>${item.name}</p>
-    `).join('');
+    `
+      )
+      .join("");
 
     const formuleMidiPlatsHTML = menu.menus.formuleMidi.plats
       .map(
@@ -23,228 +26,291 @@ class Menu {
       )
       .join("");
 
-        const formuleSoirWKEntreesHTML = menu.menus.formuleSoirWK.entrees
-          .map(
-            (item) => `
+    const formuleSoirWKEntreesHTML = menu.menus.formuleSoirWK.entrees
+      .map(
+        (item) => `
           <p>${item.name}</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const formuleSoirWKPlatsHTML = menu.menus.formuleSoirWK.plats
-          .map(
-            (item) => `
+    const formuleSoirWKPlatsHTML = menu.menus.formuleSoirWK.plats
+      .map(
+        (item) => `
           <p>${item.name}</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const formuleSoirWKDessertsHTML = menu.menus.formuleSoirWK.desserts
-          .map(
-            (item) => `
+    const formuleSoirWKDessertsHTML = menu.menus.formuleSoirWK.desserts
+      .map(
+        (item) => `
           <p>${item.name}</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const menuEnfantHTML = menu.menus.menuEnfant
-          .map(
-            (item) => `
+    const menuEnfantHTML = menu.menus.menuEnfant
+      .map(
+        (item) => `
           <p>${item.name}</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const aLaCarteEntreesHTML = menu.menus.aLaCarte.entrees
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteEntreesHTML = menu.menus.aLaCarte.entrees
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const aLaCartePlatsHTML = menu.menus.aLaCarte.plats
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCartePlatsHTML = menu.menus.aLaCarte.plats
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const aLaCarteDessertsHTML = menu.menus.aLaCarte.desserts
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteDessertsHTML = menu.menus.aLaCarte.desserts
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const aLaCarteSuggestionsEntreesHTML =
-          menu.menus.aLaCarte.suggestions.entrees
-            .map(
-              (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteSuggestionsEntreesHTML =
+      menu.menus.aLaCarte.suggestions.entrees
+        .map(
+          (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+            2
+          )}€</p>
         `
-            )
-            .join("");
+        )
+        .join("");
 
-        const aLaCarteSuggestionsPlatsHTML = menu.menus.aLaCarte.suggestions.plats
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteSuggestionsPlatsHTML = menu.menus.aLaCarte.suggestions.plats
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const aLaCarteSuggestionsDessertsHTML =
-          menu.menus.aLaCarte.suggestions.desserts
-            .map(
-              (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteSuggestionsDessertsHTML =
+      menu.menus.aLaCarte.suggestions.desserts
+        .map(
+          (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+            2
+          )}€</p>
         `
-            )
-            .join("");
+        )
+        .join("");
 
-        const aLaCarteGlacesIncontournablesHTML =
-          menu.menus.aLaCarte.glaces.incontournables
-            .map(
-              (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteGlacesIncontournablesHTML =
+      menu.menus.aLaCarte.glaces.incontournables
+        .map(
+          (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+            2
+          )}€</p>
         `
-            )
-            .join("");
+        )
+        .join("");
 
-        const aLaCarteGlacesInattenduesHTML =
-          menu.menus.aLaCarte.glaces.incontournables
-            .map(
-              (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteGlacesInattenduesHTML = menu.menus.aLaCarte.glaces.inattendues
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
         `
-            )
-            .join("");
+      )
+      .join("");
 
-        const aLaCarteGlacesInterditesHTML =
-          menu.menus.aLaCarte.glaces.incontournables
-            .map(
-              (item) => `
-        <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteGlacesInterditesHTML = menu.menus.aLaCarte.glaces.interdites
+      .map(
+        (item) => `
+        <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
       `
-            )
-            .join("");
-        const aLaCarteGlacesNosParfumsHTML =
-          menu.menus.aLaCarte.glaces.incontournables
-            .map(
-              (item) => `
-      <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+      )
+      .join("");
+    const aLaCarteGlacesNosParfumsGlaceHTML =
+      menu.menus.aLaCarte.glaces.nosParfums.glace
+        .map(
+          (item) => `
+      <p>${item.name} .............................. ${item.price1.toFixed(
+            2
+          )}€ - ${item.price2.toFixed(2)}€</p>
     `
-            )
-            .join("");
+        )
+        .join("");
 
-        const boissonsCocktailsHTML = menu.boissons.cocktails
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-        const boissonsBieresHTML = menu.boissons.bieres
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-        const boissonsWhiskiesHTML = menu.boissons.whiskies
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-        const boissonsAperitifsHTML = menu.boissons.aperitifs
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-        const boissonsSoftsHTML = menu.boissons.softs
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-        const boissonsBoissonsChaudesHTML = menu.boissons.boissonsChaudes
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-        const boissonsDigestifsHTML = menu.boissons.digestifs
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-          const boissonsRhumsHTML = menu.boissons.rhums
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
-        `
-          )
-          .join("");
-
-        const boissonsVinsRougeHTML = menu.boissons.vins.rouge
-          .map(
-            (item) => `
-        <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const aLaCarteGlacesNosParfumsSorbetHTML =
+      menu.menus.aLaCarte.glaces.nosParfums.sorbet
+        .map(
+          (item) => `
+        <p>${item.name} .............................. ${item.price1.toFixed(
+            2
+          )}€ - ${item.price2.toFixed(2)}€</p>
       `
-          )
-          .join("");
+        )
+        .join("");
 
-        const boissonsVinsRoseHTML = menu.boissons.vins.rose
-          .map(
-            (item) => `
-          <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const boissonsCocktailsSansAlcoolHTML = menu.boissons.cocktails.sansAlcool
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
         `
-          )
-          .join("");
+      )
+      .join("");
 
-        const boissonsVinsblancSecHTML = menu.boissons.vins.blancSec
-          .map(
-            (item) => `
-        <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const boissonsCocktailsAvecAlcoolHTML = menu.boissons.cocktails.avecAlcool
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsBieresHTML = menu.boissons.bieres
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsWhiskiesHTML = menu.boissons.whiskies
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsAperitifsHTML = menu.boissons.aperitifs
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsSoftsHTML = menu.boissons.softs
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsBoissonsChaudesHTML = menu.boissons.boissonsChaudes
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsDigestifsHTML = menu.boissons.digestifs
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsRhumsHTML = menu.boissons.rhums
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsVinsRougeHTML = menu.boissons.vins.rouge
+      .map(
+        (item) => `
+        <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
       `
-          )
-          .join("");
+      )
+      .join("");
 
-        const boissonsVinsBlancMoelleuxHTML = menu.boissons.vins.blancMoelleux
-          .map(
-            (item) => `
-      <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
+    const boissonsVinsRoseHTML = menu.boissons.vins.rose
+      .map(
+        (item) => `
+          <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+        `
+      )
+      .join("");
+
+    const boissonsVinsblancSecHTML = menu.boissons.vins.blancSec
+      .map(
+        (item) => `
+        <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
+      `
+      )
+      .join("");
+
+    const boissonsVinsBlancMoelleuxHTML = menu.boissons.vins.blancMoelleux
+      .map(
+        (item) => `
+      <p>${item.name} .............................. ${item.price.toFixed(
+          2
+        )}€</p>
     `
-          )
-          .join("");
+      )
+      .join("");
 
-        const boissonsVinsChampagneHTML = menu.boissons.vins.champagne
-          .map(
-            (item) => `
+    const boissonsVinsChampagneHTML = menu.boissons.vins.champagne
+      .map(
+        (item) => `
     <p>${item.name} .............................. ${item.price.toFixed(2)}€</p>
     `
-          )
-          .join("");
+      )
+      .join("");
 
-          return `
+    return `
           <div class="bordered-content">
             <h2>Nos Menus</h2>
             <div class="formule-midi">
@@ -327,8 +393,14 @@ class Menu {
             </div>
             <div class="desserts">
             <h4>Nos Parfums</h4>
-            <div class="menu-gauche-donnees" id="desserts-container">${aLaCarteGlacesNosParfumsHTML}</div>
-            </div>
+            <div class="entrees">
+            <h4>Nos Glaces</h4>
+            <div class="menu-gauche-donnees" id="entrees">${aLaCarteGlacesNosParfumsGlaceHTML}</div>
+          </div>
+          <div class="entrees">
+            <h4>Nos Sorbets</h4>
+            <div class="menu-gauche-donnees" id="entrees">${aLaCarteGlacesNosParfumsSorbetHTML}</div>
+          </div>
           </div>
           <br>
           <hr>
@@ -336,8 +408,13 @@ class Menu {
           <div class="boissons">
           <h3>Cocktails</h3>
           <div class="entrees">
-            <div class="menu-gauche-donnees" id="entrees">${boissonsCocktailsHTML}</div>
+            <h4>Sans alcool</h4>
+            <div class="menu-gauche-donnees" id="entrees">${boissonsCocktailsSansAlcoolHTML}</div>
           </div>
+          <div class="entrees">
+          <h4>Avec alcool</h4>
+          <div class="menu-gauche-donnees" id="entrees">${boissonsCocktailsAvecAlcoolHTML}</div>
+        </div>
           <h3>Bières<h3>
           <div class="plats">
             <div class="menu-gauche-donnees" id="plats">${boissonsBieresHTML}</div>
