@@ -1,3 +1,4 @@
+// Ajoute des points de suspension au milieu d'une chaîne de caractères si elle est inférieure à une certaine longueur maximale.
 function addMiddleDots(name, maxLength) {
   if (name.length >= maxLength) {
     return name;
@@ -6,10 +7,17 @@ function addMiddleDots(name, maxLength) {
   const dots = Array(nbrOfDotsToAdd).fill(".").join("");
   return name + dots;
 }
+
+// Méthode asynchrone permettant de générer du code HTML de la carte à partir des données récupérées depuis le fichier JSON.
 class Menu {
   async templateMenu() {
     const menu = await this.fetchData();
 
+    /*
+    Génère le code HTML représentant les entrées de la formule du midi des menu à partir des données contenues dans l'objet "menu" 
+    en utilisant la fonction 'map()' pour créer des balises <p> pour chaque éléments, 
+    puis la fonction 'join()' pour les concaténer en une seule chaîne de caractères
+    */
     const formuleMidiEntreesHTML = menu.menus.formuleMidi.entrees
       .map(
         (item) => `
@@ -69,9 +77,7 @@ class Menu {
     const aLaCarteEntreesHTML = menu.menus.aLaCarte.entrees
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -79,9 +85,7 @@ class Menu {
     const aLaCartePlatsHTML = menu.menus.aLaCarte.plats
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -89,9 +93,7 @@ class Menu {
     const aLaCarteDessertsHTML = menu.menus.aLaCarte.desserts
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -100,9 +102,7 @@ class Menu {
       menu.menus.aLaCarte.suggestions.entrees
         .map(
           (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-            2
-          )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
         )
         .join("");
@@ -110,9 +110,7 @@ class Menu {
     const aLaCarteSuggestionsPlatsHTML = menu.menus.aLaCarte.suggestions.plats
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -121,9 +119,7 @@ class Menu {
       menu.menus.aLaCarte.suggestions.desserts
         .map(
           (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-            2
-          )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
         )
         .join("");
@@ -132,9 +128,7 @@ class Menu {
       menu.menus.aLaCarte.glaces.incontournables
         .map(
           (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-            2
-          )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
         )
         .join("");
@@ -142,9 +136,7 @@ class Menu {
     const aLaCarteGlacesInattenduesHTML = menu.menus.aLaCarte.glaces.inattendues
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -152,9 +144,7 @@ class Menu {
     const aLaCarteGlacesInterditesHTML = menu.menus.aLaCarte.glaces.interdites
       .map(
         (item) => `
-        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
       `
       )
       .join("");
@@ -183,9 +173,7 @@ class Menu {
     const boissonsCocktailsSansAlcoolHTML = menu.boissons.cocktails.sansAlcool
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -193,9 +181,7 @@ class Menu {
     const boissonsCocktailsAvecAlcoolHTML = menu.boissons.cocktails.avecAlcool
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -203,9 +189,7 @@ class Menu {
     const boissonsBieresHTML = menu.boissons.bieres
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -213,9 +197,7 @@ class Menu {
     const boissonsWhiskiesHTML = menu.boissons.whiskies
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -223,9 +205,7 @@ class Menu {
     const boissonsAperitifsHTML = menu.boissons.aperitifs
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -233,9 +213,7 @@ class Menu {
     const boissonsSoftsHTML = menu.boissons.softs
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -243,9 +221,7 @@ class Menu {
     const boissonsBoissonsChaudesHTML = menu.boissons.boissonsChaudes
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -253,9 +229,7 @@ class Menu {
     const boissonsDigestifsHTML = menu.boissons.digestifs
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -263,9 +237,7 @@ class Menu {
     const boissonsRhumsHTML = menu.boissons.rhums
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -273,9 +245,7 @@ class Menu {
     const boissonsVinsRougeHTML = menu.boissons.vins.rouge
       .map(
         (item) => `
-        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
       `
       )
       .join("");
@@ -283,9 +253,7 @@ class Menu {
     const boissonsVinsRoseHTML = menu.boissons.vins.rose
       .map(
         (item) => `
-          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+          <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
         `
       )
       .join("");
@@ -293,9 +261,7 @@ class Menu {
     const boissonsVinsblancSecHTML = menu.boissons.vins.blancSec
       .map(
         (item) => `
-        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+        <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
       `
       )
       .join("");
@@ -303,9 +269,7 @@ class Menu {
     const boissonsVinsBlancMoelleuxHTML = menu.boissons.vins.blancMoelleux
       .map(
         (item) => `
-      <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(
-          2
-        )}€</p>
+      <p>${addMiddleDots(item.name, 90)}  ${item.price.toFixed(2)}€</p>
     `
       )
       .join("");
@@ -319,163 +283,95 @@ class Menu {
       .join("");
 
     return `
-          <div class="bordered-content">
-            <h2>Nos Menus</h2>
-            <div class="formule-midi">
-              <h3>Formule Midi</h3>
-              <div class="entrees">
-                <h4>Entrées</h4>
-                <div class="menu-gauche-donnees" id="formule-midi-entrees">${formuleMidiEntreesHTML}</div>
-              </div>
-              <div class="plats">
-                <h4>Plats</h4>
-                <div class="menu-gauche-donnees" id="formule-midi-plats">${formuleMidiPlatsHTML}</div>
-              </div>
-              <div class="desserts">
-                <h4>Desserts</h4>
-                <div class="menu-gauche-donnees" id="formule-midi-desserts">${formuleMidiDessertsHTML}</div>
-              </div>
-            </div>
-            <br>
-            <h3>Formule Soir & Week-end</h3>
-            <div class="entrees">
-              <h4>Entrées</h4>
-              <div class="menu-gauche-donnees" id="soir-weekend-entrees">${formuleSoirWKEntreesHTML}</div>
-            </div>
-            <div class="plats">
-              <h4>Plats</h4>
-              <div class="menu-gauche-donnees" id="soir-weekend-plats">${formuleSoirWKPlatsHTML}</div>
-            </div>
-            <div class="desserts">
-              <h4>Desserts</h4>
-              <div class="menu-gauche-donnees" id="soir-weekend-desserts">${formuleSoirWKDessertsHTML}</div>
-            </div>
-            <br>
-            <h3>Menu Enfant</h3>
-            <div class="entrees">
-              <div class="menu-gauche-donnees" id="enfants-entrees">${menuEnfantHTML}</div>
-            </div>
-            <br>
-            <hr>
-            <h2>A la carte</h2>
-            <div class="a-la-carte">
-              <h3>Entrées à la carte</h3>
-              <div class="entrees">
-                <div class="menu-gauche-donnees" id="ala-carte-entrees">${aLaCarteEntreesHTML}</div>
-              </div>
-              <h3>Plats à la carte</h3>
-              <div class="plats">
-                <div class="menu-gauche-donnees" id="ala-carte-plats">${aLaCartePlatsHTML}</div>
-              </div>
-              <h3>Desserts à la carte</h3>
-              <div class="desserts">
-                <div class="menu-gauche-donnees" id="ala-carte-desserts">${aLaCarteDessertsHTML}</div>
-              </div>
-              <br>
-              <h3>Suggestions</h3>
-              <div class="entrees">
-                <h4>Entrées</h4>
-                <div class="menu-gauche-donnees" id="suggestions-entrees">${aLaCarteSuggestionsEntreesHTML}</div>
-              </div>
-              <div class="plats">
-                <h4>Plats</h4>
-                <div class="menu-gauche-donnees" id="suggestions-plats">${aLaCarteSuggestionsPlatsHTML}</div>
-              </div>
-            <div class="desserts">
-              <h4>Desserts</h4>
-              <div class="menu-gauche-donnees" id="desserts-container">${aLaCarteSuggestionsDessertsHTML}</div>
-            </div>
-            <br>
-            <h3>Glaces</h3>
-            <div class="entrees">
-              <h4>Les Incontournables</h4>
-              <div class="menu-gauche-donnees" id="entrees">${aLaCarteGlacesIncontournablesHTML}</div>
-            </div>
-            <div class="plats">
-              <h4>Les Inattendues</h4>
-              <div class="menu-gauche-donnees" id="plats">${aLaCarteGlacesInattenduesHTML}</div>
-            </div>
-            <div class="desserts">
-              <h4>Les Interdites</h4>
-              <div class="menu-gauche-donnees" id="desserts-container">${aLaCarteGlacesInterditesHTML}</div>
-            </div>
-            <div class="desserts">
-            <h4>Nos Parfums</h4>
-            <div class="entrees">
-            <h4>Nos Glaces</h4>
-            <div class="menu-gauche-donnees" id="entrees">${aLaCarteGlacesNosParfumsGlaceHTML}</div>
-          </div>
-          <div class="entrees">
-            <h4>Nos Sorbets</h4>
-            <div class="menu-gauche-donnees" id="entrees">${aLaCarteGlacesNosParfumsSorbetHTML}</div>
-          </div>
-          </div>
-          <br>
-          <hr>
-          <h2>Nos Boissons</h2>
-          <div class="boissons">
-          <h3>Cocktails</h3>
-          <div class="entrees">
-            <h4>Sans alcool</h4>
-            <div class="menu-gauche-donnees" id="entrees">${boissonsCocktailsSansAlcoolHTML}</div>
-          </div>
-          <div class="entrees">
-          <h4>Avec alcool</h4>
-          <div class="menu-gauche-donnees" id="entrees">${boissonsCocktailsAvecAlcoolHTML}</div>
-        </div>
-          <h3>Bières<h3>
-          <div class="plats">
-            <div class="menu-gauche-donnees" id="plats">${boissonsBieresHTML}</div>
-          </div>
-          <h3>Whiskies<h3>
-          <div class="desserts">
-            <div class="menu-gauche-donnees" id="desserts-container">${boissonsWhiskiesHTML}</div>
-          </div>
-          <h3>Apéritifs</h3>
-          <div class="entrees">
-            <div class="menu-gauche-donnees" id="entrees">${boissonsAperitifsHTML}</div>
-          </div>
-          <h3>Softs<h3>
-          <div class="plats">
-            <div class="menu-gauche-donnees" id="plats">${boissonsSoftsHTML}</div>
-          </div>
-          <h3>Digestifs<h3>
-          <div class="desserts">
-            <div class="menu-gauche-donnees" id="desserts-container">${boissonsDigestifsHTML}</div>
-          </div>
-          <h3>Rhums<h3>
-          <di class="desserts">
-            <div class="menu-gauche-donnees" id="desserts-container">${boissonsRhumsHTML}</div>
-          </div>
-          <h3>Boissons chaudes<h3>
-          <div class="desserts">
-            <div class="menu-gauche-donnees" id="desserts-container">${boissonsBoissonsChaudesHTML}</div>
-          </div>
-          <h3>Les Vins</h3>
-            <div class="entrees">
-              <h4>Vins Rouge</h4>
-              <div class="menu-gauche-donnees" id="entrees">${boissonsVinsRougeHTML}</div>
-            </div>
-            <div class="plats">
-              <h4>Vins Rosé</h4>
-              <div class="menu-gauche-donnees" id="plats">${boissonsVinsRoseHTML}</div>
-            </div>
-            <div class="desserts">
-              <h4>Vin Blanc sec</h4>
-              <div class="menu-gauche-donnees" id="desserts-container">${boissonsVinsblancSecHTML}</div>
-            </div>
-            <div class="desserts">
-            <h4>Vins bkanc moelleux</h4>
-            <div class="menu-gauche-donnees" id="desserts-container">${boissonsVinsBlancMoelleuxHTML}</div>
-            </div>
-            <div class="desserts">
-            <h4>Champagne</h4>
-            <div class="menu-gauche-donnees" id="desserts-container">${boissonsVinsChampagneHTML}</div>
-            </div>
-          </div>
-        </div>
+    <div class="bordered-content">
+    <h2 id="menus">Nos Menus</h2>
+    <h3 id="menus-formuleMidi">Formule Midi</h3>
+    <h4>Entrées</h4>
+    <div class="menu-gauche-donnees">${formuleMidiEntreesHTML}</div>
+    <h4>Plats</h4>
+    <div class="menu-gauche-donnees">${formuleMidiPlatsHTML}</div>
+    <h4>Desserts</h4>
+    <div class="menu-gauche-donnees">${formuleMidiDessertsHTML}</div>
+    <br>
+    <h3 id="menus-formuleSoirWK">Formule Soir & Week-end</h3>
+    <h4>Entrées</h4>
+    <div class="menu-gauche-donnees">${formuleSoirWKEntreesHTML}</div>
+    <h4>Plats</h4>
+    <div class="menu-gauche-donnees">${formuleSoirWKPlatsHTML}</div>
+    <h4>Desserts</h4>
+    <div class="menu-gauche-donnees">${formuleSoirWKDessertsHTML}</div>
+    <br>
+    <h3>Menu Enfant</h3>
+    <div class="menu-gauche-donnees" id="menus-enfant">${menuEnfantHTML}</div>
+    <br>
+    <hr>
+    <h2 id="aLaCarte">A la carte</h2>
+    <h3>Entrées à la carte</h3>
+    <div class="menu-gauche-donnees" id="aLaCarte-entrees">${aLaCarteEntreesHTML}</div>
+    <h3>Plats à la carte</h3>
+    <div class="menu-gauche-donnees" id="aLaCarte-plats">${aLaCartePlatsHTML}</div>
+    <h3>Desserts à la carte</h3>
+    <div class="menu-gauche-donnees" id="aLaCarte-desserts">${aLaCarteDessertsHTML}</div>
+    <br>
+    <h3 id="aLaCarte-suggestions">Suggestions</h3>
+    <h4>Entrées</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-suggestions-entrees">${aLaCarteSuggestionsEntreesHTML}</div>
+    <h4>Plats</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-suggestions-plats">${aLaCarteSuggestionsPlatsHTML}</div>
+    <h4>Desserts</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-suggestions-desserts">${aLaCarteSuggestionsDessertsHTML}</div>
+    <br>
+    <h3 id="aLaCarte-glaces">Glaces</h3>
+    <h4>Les Incontournables</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-glaces-incontournables">${aLaCarteGlacesIncontournablesHTML}</div>
+    <h4>Les Inattendues</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-glaces-inattendues">${aLaCarteGlacesInattenduesHTML}</div>
+    <h4>Les Interdites</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-glaces-interdites">${aLaCarteGlacesInterditesHTML}</div>
+    <h4 id="aLaCarte-glaces-nosParfums">Nos Parfums</h4>
+    <h4>Nos Glaces</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-glaces-nosParfums-glaces">${aLaCarteGlacesNosParfumsGlaceHTML}</div>
+    <h4>Nos Sorbets</h4>
+    <div class="menu-gauche-donnees" id="aLaCarte-glaces-nosParfums-sorbets">${aLaCarteGlacesNosParfumsSorbetHTML}</div>
+    <br>
+    <hr>
+    <h2 id="boissons">Nos Boissons</h2>
+    <h3 id="boissons-cocktails">Cocktails</h3>
+    <h4>Sans alcool</h4>
+    <div class="menu-gauche-donnees" id="boissons-cocktails-sansAlcool">${boissonsCocktailsSansAlcoolHTML}</div>
+    <h4>Avec alcool</h4>
+    <div class="menu-gauche-donnees" id="boissons-cocktails-avecAlcool">${boissonsCocktailsAvecAlcoolHTML}</div>
+    <h3>Nos Apéritifs</h3>
+    <div class="menu-gauche-donnees" id="boissons-aperitifs">${boissonsAperitifsHTML}</div>
+    <h3>Nos Bières<h3>
+    <div class="menu-gauche-donnees" id="boissons-bieres">${boissonsBieresHTML}</div>
+    <h3>Nos Softs<h3>
+    <div class="menu-gauche-donnees" id="boissons-softs">${boissonsSoftsHTML}</div>
+    <h3>Nos Whiskies<h3>
+    <div class="menu-gauche-donnees" id="boissons-whiskies">${boissonsWhiskiesHTML}</div>
+    <h3>Nos Digestifs<h3>
+    <div class="menu-gauche-donnees" id="boissons-digestifs">${boissonsDigestifsHTML}</div>
+    <h3>Nos Rhums<h3>
+    <div class="menu-gauche-donnees" id="boissons-rhums">${boissonsRhumsHTML}</div>
+    <h3>Nos Boissons chaudes<h3>
+    <div class="menu-gauche-donnees" id="boissons-boissonsChaudes">${boissonsBoissonsChaudesHTML}</div>
+    <h3 id="boissons-vinsChampagnes">Nos Vins</h3>
+    <h4>Vins Rouge</h4>
+    <div class="menu-gauche-donnees" id="boissons-vinsChampagnes-vinRouge">${boissonsVinsRougeHTML}</div>
+    <h4>Vins Rosé</h4>
+    <div class="menu-gauche-donnees" id="boissons-vinsChampagnes-vinRose">${boissonsVinsRoseHTML}</div>
+    <h4>Vins bkanc moelleux</h4>
+    <div class="menu-gauche-donnees" id="boissons-vinsChampagnes-vinBlancMoelleux">${boissonsVinsBlancMoelleuxHTML}</div>
+    <h4>Vin Blanc sec</h4>
+    <div class="menu-gauche-donnees" id="boissons-vinsChampagnes-vinBlancSec">${boissonsVinsblancSecHTML}</div>
+    <h4>Champagne</h4>
+    <div class="menu-gauche-donnees" id="boissons-vinsChampagnes-Champagne">${boissonsVinsChampagneHTML}</div>
+  </div>
+  
       `;
   }
+  // Fonction asynchrone qui récupèrer les données depuis le fichier JSON en utilisant l'API Fetch,
+  // puis les transforme en objet JSON avant de les renvoyer
   async fetchData() {
     const rawData = await fetch("data.json");
     const data = await rawData.json();
@@ -483,6 +379,7 @@ class Menu {
   }
 }
 
+// Remplissage du DOM HTML
 const el_menu = document.querySelector(".menu-colonne-gauche");
 const menu = new Menu();
 
@@ -493,37 +390,42 @@ async function renderMenu() {
 renderMenu();
 
 
-// Poqiiton de la nav suivant le scroll
-window.addEventListener("scroll", function() {
+
+// Position de la barre de navigation suivant le défilement de la fenêtre
+window.addEventListener("scroll", function () {
   var navigation = document.querySelector(".menu-navigation");
   var windowHeight = window.innerHeight;
-  var threshold = windowHeight * 1.4; // Ajustez cette valeur selon vos besoins
+  var threshold = windowHeight * 1.3; 
 
   if (window.pageYOffset > threshold) {
-    navigation.classList.add("sticky");
+    navigation.classList.add("sticky"); // Ajout de la classe .sticky 
   } else {
     navigation.classList.remove("sticky");
   }
 });
 
 
-// Flèche bas
-window.addEventListener('scroll', function() {
+// Bouton de retour en haut
+// Apparition de la flèche suivant le défilement de l'écran
+window.addEventListener("scroll", function () {
   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-  var scrollToTopButton = document.querySelector('.scroll-to-top');
+  var scrollToTopButton = document.querySelector(".scroll-to-top");
 
   if (scrollPosition > 500) {
-    scrollToTopButton.classList.add('show');
+    scrollToTopButton.classList.add("show"); // Ajout de la classe .show pour montrer la flèche
   } else {
-    scrollToTopButton.classList.remove('show');
+    scrollToTopButton.classList.remove("show");
   }
 });
 
-document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+// Fait défiler la fenêtre vers le haut de la page lors du clique 
+document
+  .querySelector(".scroll-to-top")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
-});

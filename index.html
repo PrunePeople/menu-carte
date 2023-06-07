@@ -4,27 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant XYZ</title>
-    <link rel="stylesheet" href="/Pages/Menu/src/style.css" />
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
     <header>
-      <img src="/Pages/Menu/src/image-menu.JPG" alt="Image" class="image" />
+      <img src="/src/image-menu.JPG" alt="Image" class="image" />
       <div class="menu-encart-cadre">
         <h1 class="menu-encart-texte">Carte & Menus</h1>
       </div>
     </header>
 
     <div class="menu-container-cadre">
-      <div class="menu-colonne-gauche">
-      </div>
+      <div class="menu-colonne-gauche"></div>
       <div class="menu-colonne-droite">
-        <nav class="menu-navigation sticky" id="nav-menu">
+        <nav class="menu-navigation sticky">
           <ul class="navbar">
-            <li class="dropdown">
-              <a href="#">Nos menus</a>
+            <li>
+              <a href="#menus">Nos Menus</a>
               <ul class="dropdown-menu">
-                <li class="dropdown">
-                  <a href="#">Formule midi</a>
+                <li>
+                  <a href="#menus-formuleMidi">Formule du Midi</a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Plat du jour</a></li>
                     <li><a href="#">Entrée + Plat</a></li>
@@ -32,53 +31,67 @@
                     <li><a href="#">Entrée + Plat + Dessert</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Formule WK et soir</a></li>
-                <li><a href="#">Menu enfant</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#">A la carte</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Entrées</a></li>
-                <li><a href="#">Plats</a></li>
-                <li><a href="#desserts">Desserts</a></li>
                 <li>
-                  <a href="#">Suggestions</a>
+                  <a href="#menus-formuleSoirWK">Formule Soir & Week-end</a>
+                </li>
+                <li><a href="#menus-enfant">Menu enfant</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#aLaCarte">A la Carte</a>
+              <ul class="dropdown-menu">
+                <li><a href="#aLaCarte-entrees">Entrées</a></li>
+                <li><a href="#aLaCarte-plats">Plats</a></li>
+                <li><a href="#aLaCarte-desserts">Desserts</a></li>
+                <li>
+                  <a href="#aLaCarte-suggestions">Nos Suggestions</a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Entrées</a></li>
-                    <li><a href="#">Plats</a></li>
-                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#aLaCarte-suggestions-entrees">Entrées</a></li>
+                    <li><a href="#aLaCarte-suggestions-plats">Plats</a></li>
+                    <li>
+                      <a href="#aLaCarte-suggestions-desserts">Desserts</a>
+                    </li>
                   </ul>
                 </li>
-                <li class="dropdown">
-                  <a href="#">Glaces</a>
+                <li>
+                  <a href="#aLaCarte-glaces">Glaces</a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Les Incontournables</a></li>
-                    <li><a href="#">Les Inattendues</a></li>
-                    <li><a href="#">Les Interdites</a></li>
-                    <li><a href="#">Nos parfums</a></li>
+                    <li><a href="#aLaCarte-glaces-incontournables">Les Incontournables</a></li>
+                    <li><a href="#aLaCarte-glaces-inattendues">Les Inattendues</a></li>
+                    <li><a href="#aLaCarte-glaces-interdites">Les Interdites</a></li>
+                    <li><a href="#aLaCarte-glaces-nosParfums">Nos parfums</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#aLaCarte-glaces-nosParfums-glaces">Nos Parfums de glace</a></li>
+                        <li><a href="#aLaCarte-glaces-nosParfums-sorbets">Nos Parfums de sorbet</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#">Nos Boissons</a>
+            <li>
+              <a href="#boissons">Nos Boissons</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Cocktails</a></li>
-                <li><a href="#">Nos bières</a></li>
-                <li><a href="#">Nos whiskies</a></li>
-                <li><a href="#">Nos apéritifs</a></li>
-                <li><a href="#">Nos softs</a></li>
-                <li><a href="#">Nos boissons chaudes</a></li>
-                <li><a href="#">Nos digestifs</a></li>
-                <li class="dropdown">
-                  <a href="#">Nos vins</a>
+                <li><a href="#boissons-cocktails">Nos Cocktails</a></li>
+                <ul>
+                  <li><a href="#boissons-cocktails-sansAlcool"></a></li>
+                  <li><a href="#boissons-cocktails-avecAlcool"></a></li>
+                </ul>
+                <li><a href="#boissons-aperitifs">Nos Apéritifs</a></li>
+                <li><a href="#boissons-bieres">Nos Bières</a></li>
+                <li><a href="#boissons-softs">Nos Softs</a></li>
+                <li><a href="#boissons-whiskies">Nos Whiskies</a></li>
+                <li><a href="#boissons-digestifs">Nos Digestifs</a></li>
+                <li><a href="#boissons-rhums">Nos Rhums</a></li>
+                <li><a href="#boissons-boissonsChaudes">Nos Boissons chaudes</a></li>
+                <li>
+                  <a href="#boissons-vinsChampagnes">Nos Vins & Champagnes</a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Vin rouge</a></li>
-                    <li><a href="#">Vin rosé</a></li>
-                    <li><a href="#">Vin blanc moelleux</a></li>
-                    <li><a href="#">Vin blanc sec</a></li>
-                    <li><a href="#">Champagne</a></li>
+                    <li><a href="#boissons-vinsChampagnes-vinRouge">Vin rouge</a></li>
+                    <li><a href="#boissons-vinsChampagnes-vinRose">Vin rosé</a></li>
+                    <li><a href="#boissons-vinsChampagnes-vinBlancMoelleux">Vin blanc moelleux</a></li>
+                    <li><a href="#boissons-vinsChampagnes-vinBlancSec">Vin blanc sec</a></li>
+                    <li><a href="#boissons-vinsChampagnes-Champagne">Champagne</a></li>
                   </ul>
                 </li>
               </ul>
@@ -89,7 +102,7 @@
     </div>
     <script src="script.js"></script>
     <a href="#" class="scroll-to-top">
-      <img src="/Pages/Menu/src/arrow-up-solid.svg" alt="Flèche vers le haut">
+      <img src="/src/arrow-up-solid.svg" alt="Flèche vers le haut" />
     </a>
   </body>
 </html>
